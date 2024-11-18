@@ -1,0 +1,32 @@
+<meta charset="UTF-8" />
+<script>
+  /*
+    PROBLEMA: ARRAY EM ORDEM CRESCENTE
+    Peça para um usuário inserir dois números. Crie um array com os números, colocando-os em ordem crescente. Para ordenar, NÃO use o método sort();
+    Retorne os elementos do array, separando-os por hífen (n1 - n2).
+    */
+
+  // ENTRADA
+
+  const num1 = Number(prompt("Informe o primeiro número:"));
+  const num2 = Number(prompt("Informe o segundo número:"));
+
+  // PROCESSAMENTO
+
+  let lista;
+  if (isNaN(num1) || isNaN(num2)) {
+    lista = "Informe valores válidos!";
+  } else {
+
+    if (num1 < num2) {
+      lista = [num1, num2];
+    } else {
+      lista = [num2, num1];
+    }
+    lista = lista.join(" - ");
+  }
+
+  // SAÍDA
+
+  document.write(lista);
+</script>
