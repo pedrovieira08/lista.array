@@ -13,12 +13,22 @@
     */
 
     //ENTRADA
+    const nomeCores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
+    const nomescoresEscolhido = prompt(`informe uma cor. ${nomeCores}`).toLowerCase();
 
 
     //PROCESSAMENTO
 
+    const numeroAleatorio = Math.floor(Math.random() * 7);
+    const cordasorte = nomeCores[numeroAleatorio];
 
     //SAÍDA
+
+    if(nomescoresEscolhido === cordasorte){
+        document.write(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${nomescoresEscolhido}!`);
+    }else{
+        document.write(`NÃO FOI DESSA VEZ... TENTE NOVAMENTE!.<br>` + `a cor que foi sorteada era ${cordasorte}`);
+    }
 
 
     /*
@@ -30,5 +40,6 @@
     Para o problema em questão, utilizar-se-á a junção das seguintes funções e operações:
     Math.floor(Math.random() * 7);
     Entretanto, não faça uma cópia e cola apenas. Execute os comandos acima para compreender a lógica.
-    */
+    */  
+
 </script>

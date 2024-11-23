@@ -9,21 +9,25 @@
     */
 
     //ENTRADA
-    const remover = prompt(`informe qual carro deseja remover da lista. Sendo eles Tiggo, Sportage, Tucson, EcoSport`);
+    const remover = prompt(`informe qual carro deseja remover da lista. Sendo eles Tiggo, Sportage, Tucson, EcoSport`).toLowerCase();
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
-
+    const carroSu = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
     //PROCESSAMENTO
-    if(carrosSUV == "Tiggo"){
-        carrosSUV.shift()
-    }else if(carrosSUV == "Sportage"){
-        carrosSUV =carrosSUV.splice(1, 1); 
-    }else if(carrosSUV == "Tucson"){
-        carrosSUV = carrosSUV.splice(2, 1);
-    }else if()
-   
 
+    let remocaoCarro = carrosSUV.indexOf(remover);
 
-
+    if(remover == "tiggo"){
+        remocaoCarro = carrosSUV.splice(0, 1);
+    }else if(remover == "sportage"){
+        remocaoCarro = carrosSUV.splice(1, 1); 
+    }else if(remover == "tucson"){
+        remocaoCarro = carrosSUV.splice(2, 1);
+    }else if(remover == "ecosport"){
+        remocaoCarro = carrosSUV.splice(3, 1);
+    }else{
+        remocaoCarro = `informe um carro valido`;
+    }
     //SAÍDA
+    document.write(`lista antiga: ${carroSu.join(", ")}.<br>` + `lista nova: ${carrosSUV.join(", ")}`);
 
 </script>
