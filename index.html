@@ -9,11 +9,20 @@
     */
 
     //ENTRADA
-
+    const digite = prompt(`digite uma palavra.`).toLowerCase();
+    const letraDigitada = prompt(`digite a letra que deseja encontar na palvra que acabou de digitar.`).toLowerCase();
+    const soletraDa = Array.from(`${digite}`);
+    const posicaoLetra  = digite.indexOf(letraDigitada);
 
     //PROCESSAMENTO
+    let reposta;
+     if(posicaoLetra !== -1){
+        reposta = `A letra ${letraDigitada} na palavra ${digite} esta na posição ${posicaoLetra}.`;
+    }else{
+        reposta = `A letra ${letraDigitada} não tem na palavra ${digite}.`;
+    }
 
 
     //SAÍDA
-
+    document.write(`${reposta}`);
 </script>
